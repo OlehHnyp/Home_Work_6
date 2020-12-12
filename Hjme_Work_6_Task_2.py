@@ -1,7 +1,6 @@
 from math import pi
 
 example_set = {'rectancle', 'triancle', 'circle'}
-
 choice = list(set(input(
     "Hello, I can calculate the square of rectangle, \
 triangle and circle. Please enter your choice. \
@@ -10,7 +9,7 @@ Separate figures by space:"
 
 while len(choice)==0 or not set(choice).issubset(example_set):
     choice = list(set(input(
-        "Try again! Don't make mistakes, make the choice."
+        "Try again! Don't make mistakes, make the choice:"
         ).lower().split()))
 
 rectancle_square = None
@@ -23,7 +22,7 @@ def rectancle():
     This function calculate
     the square of rectancle
     Input parameters:
-    Output: float
+    Output: None
     """
 
     while 1:
@@ -46,7 +45,7 @@ def triancle():
     This function calculate the square
     of triancle
     Input parameters:
-    Output: float
+    Output: None
     """
     while 1:
         try:
@@ -68,7 +67,7 @@ def circle():
     This function calculate the square
     of circle
     Input parameters:
-    Output: float
+    Output: None
     """
 
     while 1:
