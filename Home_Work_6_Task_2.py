@@ -1,6 +1,6 @@
 from math import pi
 
-example_set = {'rectancle', 'triancle', 'circle'}
+example_set = {'rectangle', 'triangle', 'circle'}
 choice = list(set(input(
     "Hello, I can calculate the square of rectangle, \
 triangle and circle. Please enter your choice. \
@@ -12,51 +12,51 @@ while len(choice)==0 or not set(choice).issubset(example_set):
         "Try again! Don't make mistakes, make the choice:"
         ).lower().split()))
 
-rectancle_square = None
-triancle_square = None
+rectangle_square = None
+triangle_square = None
 circle_square = None
 
 
-def rectancle():
+def rectangle():
     """
     This function calculate
-    the square of rectancle
+    the square of rectangle
     Input parameters:
     Output: None
     """
 
     while 1:
         try:
-            rectancle_lenght = float(input(
-                "Insert rectancle lenght:"
+            rectangle_lenght = float(input(
+                "Insert rectangle lenght:"
                 ))
-            rectancle_height = float(input(
-                "Insert rectancle height:"
+            rectangle_height = float(input(
+                "Insert rectangle height:"
                 ))
-            global rectancle_square
-            rectancle_square = round(rectancle_lenght*rectancle_height, 2)
+            global rectangle_square
+            rectangle_square = round(rectangle_lenght*rectangle_height, 2)
             break
         except ValueError:
             print("Try again!")
 
 
-def triancle():
+def triangle():
     """
     This function calculate the square
-    of triancle
+    of triangle
     Input parameters:
     Output: None
     """
     while 1:
         try:
-            triancle_side = float(input(
-                "Insert side of triancle:"
+            triangle_side = float(input(
+                "Insert side of triangle:"
                 ))
-            triancle_height = float(input(
-                "Insert triancle heigh taken from that side:"
+            triangle_height = float(input(
+                "Insert triangle height taken from that side:"
                 ))
-            global triancle_square
-            triancle_square = round(0.5 * triancle_side * triancle_height, 2)
+            global triangle_square
+            triangle_square = round(0.5 * triangle_side * triangle_height, 2)
             break
         except ValueError:
             print("Try again!")
@@ -85,8 +85,8 @@ def circle():
 for el in choice:
     eval(f"{el}()")
 
-names_and_squares = {'rectancle': rectancle_square,
-                     'triancle': triancle_square,
+names_and_squares = {'rectangle': rectangle_square,
+                     'triangle': triangle_square,
                      'circle': circle_square
                      }
 
